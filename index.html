@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ciclo do Alimento - Agrinho 2024</title>
+  
+</head>
+<body>
+  <!-- Font size controls radios (hidden) -->
+  <input type="radio" name="fontsize" id="font-small" />
+  <input type="radio" name="fontsize" id="font-medium" checked />
+  <input type="radio" name="fontsize" id="font-large" />
+
+  <!-- Font size control buttons -->
+  <div class="font-controls" role="group" aria-label="Controle tamanho da fonte">
+    <label for="font-small" tabindex="0" aria-pressed="false">Diminuir Fonte</label>
+    <label for="font-medium" tabindex="0" aria-pressed="true">Fonte Normal</label>
+    <label for="font-large" tabindex="0" aria-pressed="false">Aumentar Fonte</label>
+  </div>
+
+  <div class="content">
+    <!-- Header -->
+    <header class="header" role="banner">
+      <div class="header-container">
+        <h1 class="logo">🌱 Ciclo do Alimento</h1>
+        <nav class="nav" role="navigation" aria-label="Menu principal">
+          <a href="#inicio" class="nav-btn">Início</a>
+          <a href="#ciclo" class="nav-btn">Ciclo</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero" tabindex="0" aria-label="Seção de introdução">
+      <h1>🌱 O Ciclo do Alimento: Da Terra à Mesa 🍽️</h1>
+      <p>
+        Descubra a fascinante jornada dos alimentos, desde o plantio no campo 
+        até chegar à sua mesa, conectando o mundo rural e urbano.
+      </p>
+      <a href="#ciclo" class="hero-btn">Explorar o Ciclo</a>
+    </section>
+
+    <!-- Cycle Steps -->
+    <section id="ciclo" class="cycle-section" tabindex="0" aria-label="Seção das etapas do ciclo do alimento">
+      <h2 class="section-title">As 6 Etapas do Ciclo do Alimento</h2>
+      <div class="steps-grid">
+        <article class="step-card plantio" tabindex="0">
+          <div class="step-icon" aria-hidden="true">🌱</div>
+          <h3 class="step-title">1. Plantio - O Início da Vida</h3>
+          <p class="step-description">
+            Preparação cuidadosa do solo, seleção de sementes de qualidade e aplicação 
+            de técnicas agrícolas sustentáveis para garantir o crescimento saudável das plantas.
+          </p>
+        </article>
+
+        <article class="step-card colheita" tabindex="0">
+          <div class="step-icon" aria-hidden="true">🌾</div>
+          <h3 class="step-title">2. Colheita - O Fruto do Trabalho</h3>
+          <p class="step-description">
+            Identificação do ponto ideal de maturação e coleta cuidadosa dos produtos, 
+            preservando sua qualidade e valor nutricional.
+          </p>
+        </article>
+
+        <article class="step-card processamento" tabindex="0">
+          <div class="step-icon" aria-hidden="true">🏭</div>
+          <h3 class="step-title">3. Processamento - Transformação e Qualidade</h3>
+          <p class="step-description">
+            Limpeza, seleção e transformação dos produtos agrícolas em alimentos prontos 
+            para consumo, seguindo rigorosos padrões de qualidade.
+          </p>
+        </article>
+
+        <article class="step-card distribuicao" tabindex="0">
+          <div class="step-icon" aria-hidden="true">🚛</div>
+          <h3 class="step-title">4. Distribuição - Levando aos Mercados</h3>
+          <p class="step-description">
+            Transporte eficiente e seguro dos alimentos através de uma rede logística 
+            que conecta produtores aos centros urbanos.
+          </p>
+        </article>
+
+        <article class="step-card consumo" tabindex="0">
+          <div class="step-icon" aria-hidden="true">🍽️</div>
+          <h3 class="step-title">5. Consumo - Na Mesa das Famílias</h3>
+          <p class="step-description">
+            Chegada dos alimentos aos supermercados, feiras e finalmente às residências, 
+            onde são preparados e consumidos pelas famílias.
+          </p>
+        </article>
+
+        <article class="step-card sustentabilidade" tabindex="0">
+          <div class="step-icon" aria-hidden="true">♻️</div>
+          <h3 class="step-title">6. Sustentabilidade - Fechando o Ciclo</h3>
+          <p class="step-description">
+            Compostagem de restos orgânicos e reciclagem de embalagens, devolvendo 
+            nutrientes ao solo e promovendo a economia circular.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Sustainability Section -->
+    <section class="sustainability" tabindex="0" aria-label="Seção sobre sustentabilidade">
+      <div class="sustainability-container">
+        <h2>🌍 Sustentabilidade no Ciclo Alimentar</h2>
+        <p>
+          Cada etapa do ciclo pode ser otimizada para reduzir o impacto ambiental 
+          e promover práticas mais sustentáveis.
+        </p>
+        
+        <div class="sustainability-features">
+          <article class="feature-card" tabindex="0">
+            <h3>🌱 Agricultura Orgânica</h3>
+            <p>Cultivo sem pesticidas químicos, preservando a biodiversidade e a saúde do solo.</p>
+          </article>
+          
+          <article class="feature-card" tabindex="0">
+            <h3>💧 Gestão da Água</h3>
+            <p>Uso eficiente de recursos hídricos através de irrigação inteligente.</p>
+          </article>
+          
+          <article class="feature-card" tabindex="0">
+            <h3>📦 Embalagens Eco-friendly</h3>
+            <p>Materiais biodegradáveis e recicláveis para reduzir resíduos.</p>
+          </article>
+          
+          <article class="feature-card" tabindex="0">
+            <h3>🚲 Transporte Verde</h3>
+            <p>Otimização de rotas e uso de veículos menos poluentes.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Saiba Mais Section before footer -->
+    <section class="saiba-mais" tabindex="0" aria-label="Saiba mais sobre o ciclo do alimento">
+      Para saber mais informações detalhadas sobre o Ciclo do Alimento, visite a página 
+      <a href="resumo.html" aria-label="Página com resumo do Ciclo do Alimento">Resumo</a>.
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>🌱 Ciclo do Alimento</h3>
+          <p>
+            Projeto educativo sobre a jornada dos alimentos da terra à mesa, 
+            promovendo a conexão entre campo e cidade.
+          </p>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Recursos Educativos</h3>
+          <ul>
+            <li>• Agricultura Sustentável</li>
+            <li>• Educação Alimentar</li>
+            <li>• Consciência Ambiental</li>
+            <li>• Economia Circular</li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Agrinho 2024</h3>
+          <p>
+            Desenvolvido para o programa educacional Agrinho, 
+            conectando conhecimento sobre agricultura e alimentação.
+          </p>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2024 Projeto Agrinho - Ciclo do Alimento. Desenvolvido com 💚 para educar.</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
+
