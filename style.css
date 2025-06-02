@@ -1,0 +1,351 @@
+    /* Reset & base */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      --font-size: 16px;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      font-size: var(--font-size);
+      background-color: #f4f7f6;
+      color: #333;
+      transition: font-size 0.3s ease;
+    }
+
+    /* Font size control based on checked radio */
+    #font-small:checked ~ .content {
+      --font-size: 14px;
+    }
+    #font-medium:checked ~ .content {
+      --font-size: 16px;
+    }
+    #font-large:checked ~ .content {
+      --font-size: 18px;
+    }
+
+    /* Hide the radio inputs */
+    input[type="radio"] {
+      display: none;
+    }
+
+    /* Font control buttons container */
+    .font-controls {
+      background: #4CAF50;
+      padding: 12px 0;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      user-select: none;
+    }
+
+    /* Style the buttons as labels */
+    .font-controls label {
+      cursor: pointer;
+      display: inline-block;
+      background-color: #66bb6a;
+      color: white;
+      padding: 10px 20px;
+      margin: 0 8px;
+      border-radius: 5px;
+      font-weight: 600;
+      font-size: 1rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      user-select: none;
+    }
+    .font-controls label:hover,
+    .font-controls label:focus {
+      background-color: #57a05a;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+      outline: none;
+    }
+
+    /* Make label look pressed if their radio checked */
+    #font-small:checked + label[for="font-small"],
+    #font-medium:checked + label[for="font-medium"],
+    #font-large:checked + label[for="font-large"] {
+      background-color: #2e7d32;
+      box-shadow: 0 0 0 3px #a5d6a7 inset;
+    }
+
+    /* Wrapper to apply font-size */
+    .content {
+      font-size: var(--font-size);
+      transition: font-size 0.3s ease;
+    }
+
+    /* Header */
+    .header {
+      background: #388e3c;
+      color: white;
+      padding: 14px 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      margin: 0;
+      font-weight: 700;
+      font-size: 1.7rem;
+      user-select: none;
+    }
+    nav.nav {
+      display: flex;
+      gap: 16px;
+    }
+    .nav-btn {
+      color: white;
+      text-decoration: none;
+      padding: 10px 14px;
+      font-weight: 600;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      user-select: none;
+    }
+    .nav-btn:hover,
+    .nav-btn:focus {
+      background-color: #2e7d32;
+      outline: none;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: #e6f2e6;
+      padding: 40px 20px;
+      text-align: center;
+      box-shadow: inset 0 -4px 15px rgba(56,142,60,0.2);
+      user-select: none;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      font-weight: 700;
+      color: #2e7d32;
+    }
+    .hero p {
+      max-width: 700px;
+      margin: 0 auto 20px;
+      font-size: 1.15rem;
+      color: #444;
+    }
+    .hero-btn, .know-more-btn {
+      background: #4caf50;
+      color: white;
+      font-weight: 600;
+      font-size: 1.15rem;
+      text-decoration: none;
+      padding: 14px 36px;
+      border-radius: 40px;
+      box-shadow: 0 6px 12px rgba(76,175,80,0.45);
+      transition: background-color 0.3s ease;
+      user-select: none;
+      display: inline-block;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+    .hero-btn:hover, .know-more-btn:hover,
+    .hero-btn:focus, .know-more-btn:focus {
+      background: #388e3c;
+      outline: none;
+    }
+
+    /* Cycle Section */
+    .cycle-section {
+      max-width: 1200px;
+      margin: 40px auto 20px;
+      padding: 0 20px;
+      user-select: text;
+    }
+    .section-title {
+      text-align: center;
+      font-weight: 700;
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: #2e7d32;
+    }
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+      gap: 24px;
+    }
+    .step-card {
+      background: white;
+      border-radius: 10px;
+      padding: 25px 20px;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: transform 0.3s ease;
+      cursor: default;
+    }
+    .step-card:hover,
+    .step-card:focus-within {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+    }
+    .step-icon {
+      font-size: 2.8rem;
+      margin-bottom: 14px;
+      user-select: none;
+    }
+    .step-title {
+      font-weight: 700;
+      font-size: 1.3rem;
+      margin-bottom: 14px;
+      color: #386b31;
+      user-select: none;
+    }
+    .step-description {
+      font-size: 1rem;
+      color: #555;
+      user-select: text;
+    }
+
+    /* Sustainability Section */
+    .sustainability {
+      max-width: 1100px;
+      margin: 30px auto 20px;
+      padding: 0 20px 40px;
+      background: #f0faf0;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(56,142,60,0.1);
+      user-select: text;
+    }
+    .sustainability-container > h2 {
+      color: #2e7d32;
+      font-weight: 700;
+      font-size: 2rem;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+    .sustainability-container > p {
+      max-width: 700px;
+      margin: 0 auto 30px;
+      font-size: 1.1rem;
+      color: #444;
+    }
+    .sustainability-features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+      gap: 20px;
+    }
+    .feature-card {
+      background: white;
+      padding: 18px 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.07);
+      text-align: center;
+      transition: background-color 0.3s ease;
+      cursor: default;
+    }
+    .feature-card:hover,
+    .feature-card:focus-within {
+      background-color: #e9f7e9;
+      outline: none;
+    }
+    .feature-card h3 {
+      margin-top: 0;
+      font-size: 1.25rem;
+      color: #337733;
+      margin-bottom: 10px;
+      user-select: none;
+    }
+    .feature-card p {
+      font-size: 1rem;
+      color: #555;
+      user-select: text;
+    }
+
+    /* Saiba Mais section */
+    .saiba-mais {
+      max-width: 900px;
+      margin: 40px auto 40px;
+      padding: 25px 20px;
+      background: #dff0d8;
+      border: 2px solid #4cae4c;
+      border-radius: 10px;
+      text-align: center;
+      color: #3c763d;
+      font-size: 1.2rem;
+      font-weight: 600;
+      user-select: none;
+    }
+    .saiba-mais a {
+      color: #3c763d;
+      text-decoration: underline;
+      font-weight: 700;
+      margin-left: 10px;
+    }
+    .saiba-mais a:hover,
+    .saiba-mais a:focus {
+      color: #2b542c;
+      outline: none;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: #2e7d32;
+      color: white;
+      padding: 30px 0 15px;
+      user-select: none;
+    }
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 0 20px;
+    }
+    .footer-section {
+      flex: 1 1 300px;
+      margin: 10px 15px;
+    }
+    .footer-section h3 {
+      font-weight: 700;
+      margin-bottom: 15px;
+      font-size: 1.3rem;
+      user-select: none;
+    }
+    .footer-section p,
+    .footer-section ul {
+      font-size: 1rem;
+      color: #d4e8d4;
+      line-height: 1.5;
+      user-select: text;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .footer-section ul li {
+      margin-bottom: 6px;
+    }
+    .footer-bottom {
+      text-align: center;
+      font-size: 0.9rem;
+      padding-top: 15px;
+      color: #cde6cd;
+      user-select: none;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 720px) {
+      .header-container {
+        flex-direction: column;
+        gap: 15px;
+      }
+      nav.nav {
+        justify-content: center;
+        gap: 12px;
+      }
+      .footer-container {
+        flex-direction: column;
+        gap: 25px;
+      }
+    }
